@@ -163,7 +163,9 @@ const grafikCanvas = ref(null);
 // --- FUNGSI 1: MENGAMBIL DATA TABEL BAHAN BAKU ---
 const ambilDataBahan = async () => {
   try {
-    const response = await fetch("http://localhost:3000/laporan/produksi");
+    const response = await fetch(
+      "https://2ec2-2404-c0-ba04-f9aa-2921-c4fa-5a35-e908.ngrok-free.app/laporan/produksi",
+    );
     const data = await response.json();
     listBahanBaku.value = data;
   } catch (error) {
@@ -174,7 +176,9 @@ const ambilDataBahan = async () => {
 // --- FUNGSI 2: MENGAMBIL DATA TOP 3 MENU ---
 const ambilTopMenu = async () => {
   try {
-    const response = await fetch("http://localhost:3000/laporan/top-menu");
+    const response = await fetch(
+      "https://2ec2-2404-c0-ba04-f9aa-2921-c4fa-5a35-e908.ngrok-free.app/laporan/top-menu",
+    );
     const data = await response.json();
     topMenu.value = data;
   } catch (error) {
@@ -185,7 +189,9 @@ const ambilTopMenu = async () => {
 // --- FUNGSI 3: MENGGAMBAR GRAFIK DETAIL (STACKED) ---
 const gambarGrafik = async () => {
   try {
-    const response = await fetch("http://localhost:3000/laporan/grafik");
+    const response = await fetch(
+      "https://2ec2-2404-c0-ba04-f9aa-2921-c4fa-5a35-e908.ngrok-free.app/laporan/grafik",
+    );
     const datasetsDariBackend = await response.json();
 
     const warnaPalet = [

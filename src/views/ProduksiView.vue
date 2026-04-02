@@ -270,18 +270,21 @@ const simpanRestock = async () => {
   isRestockLoading.value = true;
 
   try {
-    const response = await fetch("http://localhost:3000/restock-bahan", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        tanggal_input: tanggalInputBahan.value,
-        nama_bahan: namaBahanMasuk.value,
-        jumlah_masuk: jumlahBahanMasuk.value,
-        satuan: satuanBahanMasuk.value,
-        harga_total: hargaBahanMasuk.value,
-        tanggal_expired: expiredBahanMasuk.value,
-      }),
-    });
+    const response = await fetch(
+      "https://2ec2-2404-c0-ba04-f9aa-2921-c4fa-5a35-e908.ngrok-free.app/restock-bahan",
+      {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          tanggal_input: tanggalInputBahan.value,
+          nama_bahan: namaBahanMasuk.value,
+          jumlah_masuk: jumlahBahanMasuk.value,
+          satuan: satuanBahanMasuk.value,
+          harga_total: hargaBahanMasuk.value,
+          tanggal_expired: expiredBahanMasuk.value,
+        }),
+      },
+    );
 
     const hasil = await response.json();
 
@@ -330,14 +333,17 @@ const simpanProduksi = async () => {
   isProduksiLoading.value = true;
 
   try {
-    const response = await fetch("http://localhost:3000/produksi-menu", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        nama_produk: menuDibuat.value,
-        jumlah_produksi: jumlahProduksi.value,
-      }),
-    });
+    const response = await fetch(
+      "https://2ec2-2404-c0-ba04-f9aa-2921-c4fa-5a35-e908.ngrok-free.app/produksi-menu",
+      {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          nama_produk: menuDibuat.value,
+          jumlah_produksi: jumlahProduksi.value,
+        }),
+      },
+    );
 
     const hasil = await response.json();
 

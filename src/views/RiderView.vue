@@ -178,7 +178,9 @@ const sisaKopi = computed(() => {
 // --- FUNGSI AMBIL NAMA RIDER ---
 const ambilDataRider = async () => {
   try {
-    const response = await fetch("http://localhost:3000/list-rider");
+    const response = await fetch(
+      "https://2ec2-2404-c0-ba04-f9aa-2921-c4fa-5a35-e908.ngrok-free.app/list-rider",
+    );
     const data = await response.json();
     listRider.value = data;
   } catch (error) {
@@ -189,7 +191,9 @@ const ambilDataRider = async () => {
 // --- FUNGSI AMBIL NAMA PRODUK (> 0) ---
 const ambilDataProduk = async () => {
   try {
-    const response = await fetch("http://localhost:3000/list-produk-tersedia");
+    const response = await fetch(
+      "https://2ec2-2404-c0-ba04-f9aa-2921-c4fa-5a35-e908.ngrok-free.app/list-produk-tersedia",
+    );
     const data = await response.json();
     listProduk.value = data;
   } catch (error) {
@@ -200,7 +204,9 @@ const ambilDataProduk = async () => {
 // --- FUNGSI AMBIL RIWAYAT HARI INI DARI DATABASE ---
 const ambilRiwayatHariIni = async () => {
   try {
-    const response = await fetch("http://localhost:3000/riwayat-hari-ini");
+    const response = await fetch(
+      "https://2ec2-2404-c0-ba04-f9aa-2921-c4fa-5a35-e908.ngrok-free.app/riwayat-hari-ini",
+    );
     const data = await response.json();
     riwayatSesi.value = data; // Timpa ingatan kosong dengan data dari database
   } catch (error) {
@@ -231,18 +237,21 @@ const simpanPenjualan = async () => {
   isLoading.value = true;
 
   try {
-    const response = await fetch("http://localhost:3000/penjualan-rider", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        nama_rider: namaRider.value,
-        tanggal: tanggalInput.value,
-        nama_produk: namaProduk.value,
-        jumlah_dibawa: jumlahDibawa.value,
-        terjual: terjual.value,
-        sisa: sisaKopi.value,
-      }),
-    });
+    const response = await fetch(
+      "https://2ec2-2404-c0-ba04-f9aa-2921-c4fa-5a35-e908.ngrok-free.app/penjualan-rider",
+      {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          nama_rider: namaRider.value,
+          tanggal: tanggalInput.value,
+          nama_produk: namaProduk.value,
+          jumlah_dibawa: jumlahDibawa.value,
+          terjual: terjual.value,
+          sisa: sisaKopi.value,
+        }),
+      },
+    );
 
     const hasil = await response.json();
 

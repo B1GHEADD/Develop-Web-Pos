@@ -191,7 +191,9 @@ let chartInstance = null;
 // --- 1. AMBIL DATA SUMMARY ---
 const ambilSummary = async () => {
   try {
-    const res = await fetch("http://localhost:3000/laporan-penjualan/summary");
+    const res = await fetch(
+      "https://2ec2-2404-c0-ba04-f9aa-2921-c4fa-5a35-e908.ngrok-free.app/laporan-penjualan/summary",
+    );
     if (res.ok) summary.value = await res.json();
   } catch (error) {
     console.error("Error summary:", error);
@@ -202,7 +204,7 @@ const ambilSummary = async () => {
 const ambilLeaderboard = async () => {
   try {
     const res = await fetch(
-      "http://localhost:3000/laporan-penjualan/leaderboard",
+      "https://2ec2-2404-c0-ba04-f9aa-2921-c4fa-5a35-e908.ngrok-free.app/laporan-penjualan/leaderboard",
     );
     if (res.ok) leaderboard.value = await res.json();
   } catch (error) {
@@ -213,7 +215,9 @@ const ambilLeaderboard = async () => {
 // --- 3. AMBIL DATA RIWAYAT TABEL ---
 const ambilRiwayat = async () => {
   try {
-    const res = await fetch("http://localhost:3000/laporan-penjualan/riwayat");
+    const res = await fetch(
+      "https://2ec2-2404-c0-ba04-f9aa-2921-c4fa-5a35-e908.ngrok-free.app/laporan-penjualan/riwayat",
+    );
     if (res.ok) riwayatPenjualan.value = await res.json();
   } catch (error) {
     console.error("Error riwayat:", error);
@@ -223,7 +227,9 @@ const ambilRiwayat = async () => {
 // --- 4. GAMBAR GRAFIK TREN HARIAN ---
 const gambarGrafik = async () => {
   try {
-    const res = await fetch("http://localhost:3000/laporan-penjualan/grafik");
+    const res = await fetch(
+      "https://2ec2-2404-c0-ba04-f9aa-2921-c4fa-5a35-e908.ngrok-free.app/laporan-penjualan/grafik",
+    );
     if (!res.ok) return;
 
     const dataHarian = await res.json();
