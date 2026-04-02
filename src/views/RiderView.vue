@@ -179,7 +179,7 @@ const sisaKopi = computed(() => {
 const ambilDataRider = async () => {
   try {
     const response = await fetch(
-      "https://2ec2-2404-c0-ba04-f9aa-2921-c4fa-5a35-e908.ngrok-free.app/list-rider",
+      "https://2ba0-2404-c0-ba04-f9aa-2921-c4fa-5a35-e908.ngrok-free.app/list-rider",
     );
     const data = await response.json();
     listRider.value = data;
@@ -192,7 +192,7 @@ const ambilDataRider = async () => {
 const ambilDataProduk = async () => {
   try {
     const response = await fetch(
-      "https://2ec2-2404-c0-ba04-f9aa-2921-c4fa-5a35-e908.ngrok-free.app/list-produk-tersedia",
+      "https://2ba0-2404-c0-ba04-f9aa-2921-c4fa-5a35-e908.ngrok-free.app/list-produk-tersedia",
     );
     const data = await response.json();
     listProduk.value = data;
@@ -205,7 +205,7 @@ const ambilDataProduk = async () => {
 const ambilRiwayatHariIni = async () => {
   try {
     const response = await fetch(
-      "https://2ec2-2404-c0-ba04-f9aa-2921-c4fa-5a35-e908.ngrok-free.app/riwayat-hari-ini",
+      "https://2ba0-2404-c0-ba04-f9aa-2921-c4fa-5a35-e908.ngrok-free.app/riwayat-hari-ini",
     );
     const data = await response.json();
     riwayatSesi.value = data; // Timpa ingatan kosong dengan data dari database
@@ -238,7 +238,7 @@ const simpanPenjualan = async () => {
 
   try {
     const response = await fetch(
-      "https://2ec2-2404-c0-ba04-f9aa-2921-c4fa-5a35-e908.ngrok-free.app/penjualan-rider",
+      "https://2ba0-2404-c0-ba04-f9aa-2921-c4fa-5a35-e908.ngrok-free.app/penjualan-rider",
       {
         method: "POST",
         headers: { "Content-Type": "application/json" },

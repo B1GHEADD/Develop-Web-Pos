@@ -271,7 +271,7 @@ const simpanRestock = async () => {
 
   try {
     const response = await fetch(
-      "https://2ec2-2404-c0-ba04-f9aa-2921-c4fa-5a35-e908.ngrok-free.app/restock-bahan",
+      "https://2ba0-2404-c0-ba04-f9aa-2921-c4fa-5a35-e908.ngrok-free.app/restock-bahan",
       {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -334,7 +334,7 @@ const simpanProduksi = async () => {
 
   try {
     const response = await fetch(
-      "https://2ec2-2404-c0-ba04-f9aa-2921-c4fa-5a35-e908.ngrok-free.app/produksi-menu",
+      "https://2ba0-2404-c0-ba04-f9aa-2921-c4fa-5a35-e908.ngrok-free.app/produksi-menu",
       {
         method: "POST",
         headers: { "Content-Type": "application/json" },

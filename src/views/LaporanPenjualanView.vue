@@ -192,7 +192,7 @@ let chartInstance = null;
 const ambilSummary = async () => {
   try {
     const res = await fetch(
-      "https://2ec2-2404-c0-ba04-f9aa-2921-c4fa-5a35-e908.ngrok-free.app/laporan-penjualan/summary",
+      "https://2ba0-2404-c0-ba04-f9aa-2921-c4fa-5a35-e908.ngrok-free.app/laporan-penjualan/summary",
     );
     if (res.ok) summary.value = await res.json();
   } catch (error) {
@@ -204,7 +204,7 @@ const ambilSummary = async () => {
 const ambilLeaderboard = async () => {
   try {
     const res = await fetch(
-      "https://2ec2-2404-c0-ba04-f9aa-2921-c4fa-5a35-e908.ngrok-free.app/laporan-penjualan/leaderboard",
+      "https://2ba0-2404-c0-ba04-f9aa-2921-c4fa-5a35-e908.ngrok-free.app/laporan-penjualan/leaderboard",
     );
     if (res.ok) leaderboard.value = await res.json();
   } catch (error) {
@@ -216,7 +216,7 @@ const ambilLeaderboard = async () => {
 const ambilRiwayat = async () => {
   try {
     const res = await fetch(
-      "https://2ec2-2404-c0-ba04-f9aa-2921-c4fa-5a35-e908.ngrok-free.app/laporan-penjualan/riwayat",
+      "https://2ba0-2404-c0-ba04-f9aa-2921-c4fa-5a35-e908.ngrok-free.app/laporan-penjualan/riwayat",
     );
     if (res.ok) riwayatPenjualan.value = await res.json();
   } catch (error) {
@@ -228,7 +228,7 @@ const ambilRiwayat = async () => {
 const gambarGrafik = async () => {
   try {
     const res = await fetch(
-      "https://2ec2-2404-c0-ba04-f9aa-2921-c4fa-5a35-e908.ngrok-free.app/laporan-penjualan/grafik",
+      "https://2ba0-2404-c0-ba04-f9aa-2921-c4fa-5a35-e908.ngrok-free.app/laporan-penjualan/grafik",
     );
     if (!res.ok) return;
 

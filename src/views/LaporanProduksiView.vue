@@ -164,7 +164,7 @@ const grafikCanvas = ref(null);
 const ambilDataBahan = async () => {
   try {
     const response = await fetch(
-      "https://2ec2-2404-c0-ba04-f9aa-2921-c4fa-5a35-e908.ngrok-free.app/laporan/produksi",
+      "https://2ba0-2404-c0-ba04-f9aa-2921-c4fa-5a35-e908.ngrok-free.app/laporan/produksi",
     );
     const data = await response.json();
     listBahanBaku.value = data;
@@ -177,7 +177,7 @@ const ambilDataBahan = async () => {
 const ambilTopMenu = async () => {
   try {
     const response = await fetch(
-      "https://2ec2-2404-c0-ba04-f9aa-2921-c4fa-5a35-e908.ngrok-free.app/laporan/top-menu",
+      "https://2ba0-2404-c0-ba04-f9aa-2921-c4fa-5a35-e908.ngrok-free.app/laporan/top-menu",
     );
     const data = await response.json();
     topMenu.value = data;
@@ -190,7 +190,7 @@ const ambilTopMenu = async () => {
 const gambarGrafik = async () => {
   try {
     const response = await fetch(
-      "https://2ec2-2404-c0-ba04-f9aa-2921-c4fa-5a35-e908.ngrok-free.app/laporan/grafik",
+      "https://2ba0-2404-c0-ba04-f9aa-2921-c4fa-5a35-e908.ngrok-free.app/laporan/grafik",
     );
     const datasetsDariBackend = await response.json();
 
